@@ -1,12 +1,126 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather App Hendricks wk6</title>
-</head>
-<body>
+<html>
+  <head>
+    <title>Hendricks Weather</title>
+    <meta charset="UTF-8" />
+  
+    <link href="src/styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     
-</body>
+  </head>
+
+  <body>
+    <div class="container">
+     
+      <div class="card border-success" style="max-width: 75rem;">
+        <div class="card-header bg-transparent border-success">
+          Weather Forecast
+        </div>
+              
+         
+          
+          <div class="card">
+            <div class="card-body">
+                <h1 id="city"></h1> 
+                <h4 id="Date"></h4>
+                
+                <p id ="temperature-description"></p>
+                 
+              <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"  alt="partly cloudy" max-width=" 300px;"/>
+              
+                        
+              <div id="temperature"></div>      
+            </div>
+          </div>
+      </div>
+
+
+        
+            <div class="card border-success" style="max-width: 75rem;">
+              <div class="card-header bg-transparent border-success">
+                <h3 class="card-title">Looking Ahead</h3>
+                <div class="row">
+                
+                    <div class="week">
+                        <div class="shading">
+                          <div class="row text-center weather-later">
+                            <div class="col">
+                              Monday<br />22° C <br />
+                            </div>
+                            <div class="col">
+                              Tuesday<br />22° C <br />
+                            </div>
+                            <div class="col">
+                              Wednesday<br />22° C <br />
+                            </div>
+                            <div class="col">
+                              Thursday<br />21° C<br />
+                            </div>
+                            <div class="col">
+                              Friday<br />20° C<br />
+                            </div>
+                          </div>
+                </br>
+                <hr>
+                <div class="container">
+                      <div class="weather-app">
+                      
+                      <form class="search-form" id="search-form">
+                        <div class= "row">
+                                <div class="col-99">
+                                  <input
+                                    type="search"
+                                    placeholder="Where to next?"
+                                    autofocus="on"
+                                    autocomplete="off"
+                                   id="city-input"
+                                    class="form-control shadow-smw-sm"
+                                  />
+                          </div>
+                                                 </div>
+                              <div class="col-3">
+                              <input
+                                type="submit"
+                                value="Search"
+                                class="form-control btn btn-primary shadow-sm"
+                              />
+                              
+                              </div>
+                        </div>
+                      </form>
+         <button class="col-3"> Current Location </button>  
+
+        <div class="row justify-content-center" id="wrap">
+          <div class="col-1">
+  
+          </div>
+          <div class="col-2" id="other-city">
+            Paris<br />
+            24°C<br />
+          </div>
+          <div class="col-1">
+           
+          </div>
+          <div class="col-2" id="other-city">
+            London<br />
+            22°C<br />
+          </div>
+          <div class="col-1">
+            
+          </div>
+          <div class="col-2" id="other-city">
+            Tokyo<br />
+            28°C<br />
+          </br>
+          </div>
+        </div>    
+  
+    <script src="src/index.js"></script>
+  </body>
 </html>
